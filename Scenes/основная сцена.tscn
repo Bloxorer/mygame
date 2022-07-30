@@ -1,7 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bql3vsa2sqo4q"]
+[gd_scene load_steps=3 format=3 uid="uid://bql3vsa2sqo4q"]
 
 [ext_resource type="PackedScene" uid="uid://bjcv20sktq53w" path="res://Scenes/персонаж.tscn" id="1_qxx53"]
+[ext_resource type="Script" path="res://персонаж.gd" id="2_0bkwe"]
 
 [node name="Start Scene" type="Node2D"]
 
 [node name="Area2D" parent="." instance=ExtResource("1_qxx53")]
+position = Vector2(242, 752)
+script = ExtResource("2_0bkwe")
