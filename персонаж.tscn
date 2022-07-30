@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjcv20sktq53w"]
+
+[ext_resource type="Texture2D" uid="uid://bif70ot26mk7f" path="res://Sprites/персонаж.png" id="1_a5la5"]
+[ext_resource type="Texture2D" uid="uid://blrmjpy7qvgbx" path="res://Sprites/руки.png" id="2_4i04m"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lsf5n"]
+animations = [{
+"frames": [ExtResource("1_a5la5")],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Персонаж" type="AnimatedSprite2D"]
+position = Vector2(44, 554)
+scale = Vector2(0.171875, 0.171875)
+frames = SubResource("SpriteFrames_lsf5n")
+metadata/_edit_group_ = true
+
+[node name="Руки" type="Sprite2D" parent="."]
+position = Vector2(-75.6364, 29.0911)
+texture = ExtResource("2_4i04m")
