@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbhjk85wl5w7"]
+
+[ext_resource type="Texture2D" uid="uid://f4xn1i6r2tci" path="res://Sprites/кнопка.png" id="1_rs0ov"]
+
+[node name="Кнопки для мобильного" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Кнопка2" type="Sprite2D" parent="."]
+position = Vector2(62, 575)
+rotation = -3.14159
+scale = Vector2(0.087, 0.102)
+texture = ExtResource("1_rs0ov")
+
+[node name="Кнопка" type="Sprite2D" parent="."]
+position = Vector2(116, 573)
+scale = Vector2(0.101563, 0.101563)
+texture = ExtResource("1_rs0ov")
+
+[node name="Кнопка3" type="Sprite2D" parent="."]
+position = Vector2(88, 527)
+rotation = -1.5708
+scale = Vector2(0.102, 0.102)
+texture = ExtResource("1_rs0ov")
