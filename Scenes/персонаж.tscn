@@ -1,30 +1,39 @@
-[gd_scene load_steps=7 format=3 uid="uid://bjcv20sktq53w"]
+[gd_scene load_steps=9 format=3 uid="uid://bjcv20sktq53w"]
 
 [ext_resource type="Texture2D" uid="uid://bif70ot26mk7f" path="res://Sprites/персонаж.png" id="1_a5la5"]
-[ext_resource type="Texture2D" uid="uid://blrmjpy7qvgbx" path="res://Sprites/руки.png" id="2_4i04m"]
 [ext_resource type="Texture2D" uid="uid://clfp3wgs5u04j" path="res://Sprites/прыжок 1.png" id="2_r8wd6"]
 [ext_resource type="Texture2D" uid="uid://bsfg6rnbxrhce" path="res://Sprites/прыжок 2.png" id="3_un3o1"]
 [ext_resource type="Texture2D" uid="uid://crlhgnfl0m5m2" path="res://Sprites/прыжок 3.png" id="4_bw1qw"]
+[ext_resource type="Texture2D" uid="uid://brqwb2f2byvas" path="res://Sprites/бег.png" id="5_xuot8"]
+[ext_resource type="Texture2D" uid="uid://banhlqakr4df3" path="res://Sprites/бег2.png" id="6_hdra5"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_lsf5n"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6rbo4"]
+radius = 29.0
+height = 82.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0tvw4"]
 animations = [{
 "frames": [ExtResource("1_a5la5"), ExtResource("2_r8wd6"), ExtResource("3_un3o1"), ExtResource("4_bw1qw")],
 "loop": true,
 "name": &"jump",
 "speed": 5.0
 }, {
-"frames": [ExtResource("1_a5la5")],
+"frames": [ExtResource("1_a5la5"), ExtResource("5_xuot8"), ExtResource("6_hdra5")],
 "loop": true,
 "name": &"run",
 "speed": 5.0
 }]
 
-[node name="Персонаж" type="AnimatedSprite2D"]
-position = Vector2(44, 554)
-scale = Vector2(0.171875, 0.171875)
-frames = SubResource("SpriteFrames_lsf5n")
+[node name="Area2D" type="Area2D"]
+position = Vector2(252, 752)
 metadata/_edit_group_ = true
 
-[node name="Руки" type="Sprite2D" parent="."]
-position = Vector2(-75.6364, 29.0911)
-texture = ExtResource("2_4i04m")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-217, -192)
+shape = SubResource("CapsuleShape2D_6rbo4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-204.25, -197)
+scale = Vector2(0.176758, 0.207031)
+frames = SubResource("SpriteFrames_0tvw4")
+animation = &"jump"

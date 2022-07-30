@@ -4,5 +4,4 @@
 
 [node name="Start Scene" type="Node2D"]
 
-[node name="Персонаж" parent="." instance=ExtResource("1_qxx53")]
-animation = &"jump"
+[node name="Area2D" parent="." instance=ExtResource("1_qxx53")]
